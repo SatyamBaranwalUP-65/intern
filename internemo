@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Client's Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+<header>
+    <h1>SATYAM GARMENTS AND GENERAL STORE</h1>
+    <img src="https://e7.pngegg.com/pngimages/987/597/png-clipart-assorted-color-clothes-on-clothes-rack-t-shirt-clothing-armoires-wardrobes-closet-clothes-hanger-clothing-retail-fashion-thumbnail.png"></img>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services<a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+           <h4>WELCOME TO MY SHOPS</h4>
+           <h4>FASHION SALE UPTO 20% OFF</h4>
+            
+            <h2>Kid's Wear.</h2>
+            <img src="https://i.pinimg.com/originals/9d/6c/db/9d6cdb45ff7b3400b2a5bb9a8cdc5775.png" alt="bg image" width="800" height="400">></img>
+            <li>Party Wear.</li>
+            <li>Ethnic Wear.</li>
+            <li>Sweat Shirts And Jackes.</li>
+            <li>Sweaters.</li>
+            <li>Tops And Tees</li>
+            <li>Shorts, Skirts, and Jeans</li>
+            <li>Pajamas and Leggings</li>
+            <li>Nightwear</li>
+
+
+     <h2>Men's Wear</h2>
+    <img src="https://i.pinimg.com/originals/9e/6c/a2/9e6ca2ad1dec47b06965cafa1e0c7052.png" alt="bg image" width="800" height="400"><img/>
+     <li>T-shirt - PAINTS</li>
+     <li>Kurta Salwar</li>
+     <li>Dhoti Pants</li>
+     <li>Indo-western</li>
+     <li>Nehru Jacket</li>
+     <li>Pathani Suit</li>
+     <li>SHIRTS-PAINTS</li>
+
+        <h2>Women's Wear</h2>
+        <img src="https://www.nicepng.com/png/detail/249-2491853_ladies-png-transparent-hd-photo-ladies-wear.png" alt="bg image" width="800" height="400"><img/>
+        <li>Miniskirt</li>
+        <li>Saree</li>
+        <li>Suit</li>
+            <li>Hoodie</li>
+            <li>Cardigan</li>
+            <li>Denim Jeans</li>
+            <li>Leggings</li>
+            <li>Tops</li>
+            <li>Coat</li>
+            <li>Shorts</li>
+            <li>Jacket</li>
+            <li>T-shirt</li>
+        <li>Skirts</li>
+
+            <h2>Children Clothing list</h2>
+            <img src="https://www.seekpng.com/png/full/245-2450718_children-s-clothing-dress-kids-wear.png"alt="bg image" width="800" height="400"><img/>
+            <li>Overalls</li>
+                <li>Mittens</li>
+               <li>Beanie</li> 
+                <li>Baby apron</li>
+                <li>Socks</li>
+                <li>Diaper</li>
+                <li>Singlet</li>
+                <li>Shoes</li>
+                <li>Safety pin</li>
+
+           </ul>
+            
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome To My Clothes Shop, where fashion meets style and quality. We are passionate about providinng you with the latest trends and timeless classics to elevate your wardrobe. Our compliment is to deliver exceptional customer experiences and fashion-forward choices for every occasion.</p>
+            <br>
+            <p>Discover the perfect blend of fashion and elegance at My Clothes Shop. With a keen eye for style and a commitment to quality, we curate a collection that speaks to the modern trendsetter. Our mission is to inspire confidence and empower individuals to express their unique identity through clothing. Welcome to a world where every outfit tells a story.</p>
+            <br>
+            <p>A clothes shop or clothes store is any shop which sells items of ready-made clothing. A small shop which sells expensive or designer clothing may be called a boutique. A shop that sells clothes for a narrowly restricted market such as school uniforms or outdoor sports may be called an outfitter.</p>
+            <br>
+            <p>Shopping for clothes in English can be a fun and rewarding way to practice your language skills and connect with the local culture. By learning and using the vocabulary and phrases we've covered in this article, you can feel more confident and comfortable when navigating the shopping experience. Remember, practice makes perfect, so be sure to take every opportunity to speak and listen in English. With a little effort and dedication, you'll soon be able to shop for clothes in English like a pro. So the next time you hit the stores, don't forget to practice your English and build your language skills!</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Free Shipping On Orders Over 10Dollar</li>
+                <li>Easy Returns And Exchanges</li>
+                <li>Personal Styling Consultations</li>
+                <li>Exclusive VIP Membership Benefits</li>
+                <li>Multiple payment methods jaise ki debit/credit cards, online wallets, ya cash on delivery</li>
+                <li>Special discounts aur offers ke liye dedicated section.</li>
+                <li>Legal terms and conditions for website usage</li>
+                <li>Email newsletters ke liye subscription option</li>
+                <li>Mobile-friendly design for a seamless user experience.</li>
+                <li>Social media links aur feeds for updates</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have Questions Or Need Assistance? Reach Out To Us!</p>
+        <ul>
+            <li>Email: info@myclothesshop.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li> Address: 123 SATYAM GARMENTS AND GENERAL STORE , CITY-DELHI, STATE(U.P),PIN CODE 201021</li>
+        </ul>
+    </section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
