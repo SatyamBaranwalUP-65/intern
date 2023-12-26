@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        #taskInput {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #addTaskBtn {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #taskList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .task:hover {
+            background-color: #09e9fe;
+        }
+
+        .task button {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #f707fb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">To-Do List</h1>
+
+        <div class="input-group mt-4">
+            <input type="text" id="taskInput" class="form-control" placeholder="Add a new task...">
+            <div class="input-group-append">
+                <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
+            </div>
+        </div>
+
+        <ul id="taskList" class="mt-4"></ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load tasks from local storage
+            const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            const taskList = document.getElementById('taskList');
+
+            function updateLocalStorage() {
+                localStorage.setItem('tasks', JSON.stringify(savedTasks));
+            }
+
+            function renderTasks() {
+                taskList.innerHTML = '';
+                savedTasks.forEach(function (task, index) {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'task';
+
+                    const taskText = document.createElement('span');
+                    taskText.textContent = task.text;
+                    if (task.completed) {
+                        taskText.classList.add('completed');
+                    }
+
+                    const editButton = document.createElement('button');
+                    editButton.textContent = 'Edit';
+                    editButton.className = 'btn btn-warning';
+                    editButton.addEventListener('click', function () {
+                        const newText = prompt('Edit task:', task.text);
+                        if (newText !== null) {
+                            savedTasks[index].text = newText;
+                            updateLocalStorage();
+                            renderTasks();
+                        }
+                    });
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.className = 'btn btn-danger';
+                    deleteButton.addEventListener('click', function () {
+                        savedTasks.splice(index, 1);
+                        updateLocalStorage();
+                        renderTasks();
+                    });
+
+                    const toggleButton = document.createElement('button');
+                    toggleButton.textContent = task.completed ? 'Uncomplete' : 'Complete';
+                    toggleButton.className = 'btn btn-success';
+                    toggleButton.addEventListener('click', function () {
+                        savedTasks[index].completed = !savedTasks[index].completed;
+                        updateLocalStorage();
+                        renderTasks();
+                    });
+
+                    listItem.appendChild(taskText);
+                    listItem.appendChild(editButton);
+                    listItem.appendChild(deleteButton);
+                    listItem.appendChild(toggleButton);
+
+                    taskList.appendChild(listItem);
+                });
+            }
+
+            renderTasks();
+
+            const addTaskBtn = document.getElementById('addTaskBtn');
+            addTaskBtn.addEventListener('click', function () {
+                const taskInput = document.getElementById('taskInput');
+                const newTask = taskInput.value.trim();
+                if (newTask !== '') {
+                    savedTasks.push({ text: newTask, completed: false });
+                    updateLocalStorage();
+                    renderTasks();
+                    taskInput.value = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
